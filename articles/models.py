@@ -8,7 +8,7 @@ class Aricle(models.Model):
     date=models.DateTimeField(auto_now_add=True)
 
     def get_absolute_url(self):
-     return reverse("detail",kwargs={'slug': self.slug})
+     return reverse("articles:article",kwargs={'slug': self.slug})
 
     def __str__(self):
      return self.title
