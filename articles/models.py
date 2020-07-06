@@ -6,7 +6,8 @@ class Aricle(models.Model):
     slug=models.SlugField()
     body=models.TextField(max_length=500)
     date=models.DateTimeField(auto_now_add=True)
-
+    thumb=models.ImageField(default='default.png',blank=True)
+    
     def get_absolute_url(self):
      return reverse("articles:article",kwargs={'slug': self.slug})
 

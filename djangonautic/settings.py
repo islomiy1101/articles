@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'articles',
     'blog',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'assets'),
 )
+
+MEDIA_URL='/meida/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
